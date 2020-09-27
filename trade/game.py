@@ -57,8 +57,3 @@ def game():
 			return render_template("trade.html", goldprice = goldprice, total_value = total_value, numofgold = numofgold, rounds = rounds)
 		
 		return redirect(url_for('game.game'))
-
-#app.secret_key = 'FUDHAUGFHSDJKIUH'
-		
-#if __name__ == '__main__':
-#	app.run()
