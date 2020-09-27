@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<h2>Products and Price List</h2>
+<p>Rounds: {{rounds}}</p>
+<p>Total: ${{total_value}}</p>
+<p>Items own: {{numofgold}} GOLD</p>
+<hr>
+{%for message in get_flashed_messages()%}
+	<div style="color:red" class = "flash">{{message}}</div>
+{% endfor %}
+<p>GOLD ${{goldprice}}</p>
+
+<p>
+<form method = "POST">
+	Buy: <input type = "text" name = "numofgold_buy" size = "3">
+	Sell: <input type = "text" name = "numofgold_sell" size = "3">
+	<input type = "submit" value="SUBMIT">
+</form>
+</p>
+
+{% endblock %}
